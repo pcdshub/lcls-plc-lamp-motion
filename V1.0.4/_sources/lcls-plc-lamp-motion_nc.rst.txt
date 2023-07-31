@@ -1,0 +1,344 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, GasJetX
+        2, GasJetY
+        3, GasJetZ
+        4, GasNeedleX
+        5, GasNeedleY
+        6, GasNeedleZ
+        7, SamplePaddleX
+        8, SamplePaddleY
+        9, SamplePaddleZ
+        10, FlowCellX
+        11, FlowCellY
+        12, FlowCellZ
+        13, FlowCellTheta
+
+
+
+Axis 1: GasJetX
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, GasJetX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:SoftEndMaxControl:Range, 2
+    Enc:SoftEndMinControl:Range, -2
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 2: GasJetY
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, GasJetY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 3: GasJetZ
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, GasJetZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 9.375e-05
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 4: GasNeedleX
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, GasNeedleX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 5: GasNeedleY
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, GasNeedleY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 9.375e-05
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 6: GasNeedleZ
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, GasNeedleZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 9.375e-05
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 7: SamplePaddleX
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, SamplePaddleX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 1e-05
+    Enc:SoftEndMinControl:Range, -39
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.001
+    TargetPosControl:Time, 0.1
+    Velo:Maximum, 1
+
+
+
+Axis 8: SamplePaddleY
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 8
+    Name, SamplePaddleY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 2e-05
+    Enc:SoftEndMaxControl:Range, 10
+    Enc:SoftEndMinControl:Range, -10
+    Id, 8
+    OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.001
+    TargetPosControl:Time, 0.1
+    Velo:Maximum, 1
+
+
+
+Axis 9: SamplePaddleZ
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 9
+    Name, SamplePaddleZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 1e-05
+    Id, 9
+    OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.001
+    TargetPosControl:Time, 0.1
+    Velo:Maximum, 1
+
+
+
+Axis 10: FlowCellX
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 10
+    Name, FlowCellX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 1
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:ScaleFactorDenominator, 1.2
+    Enc:ScaleFactorNumerator, 9.375e-05
+    Id, 10
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 11: FlowCellY
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 11
+    Name, FlowCellY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 1
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:ScaleFactorDenominator, 0.8
+    Enc:ScaleFactorNumerator, 7.8125e-05
+    Id, 11
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 12: FlowCellZ
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 12
+    Name, FlowCellZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 1
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.8125e-05
+    Id, 12
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 13: FlowCellTheta
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 13
+    Name, FlowCellTheta
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:ScaleFactorNumerator, 0.0003125
+    General:UnitName, Degree
+    Id, 13
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 10
+
+
