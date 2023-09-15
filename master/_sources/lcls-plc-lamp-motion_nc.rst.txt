@@ -19,6 +19,9 @@ NC Settings
         11, FlowCellY
         12, FlowCellZ
         13, FlowCellTheta
+        14, TIXELX
+        15, TIXELY
+        16, TIXELZ
 
 
 
@@ -340,5 +343,86 @@ Axis 13: FlowCellTheta
     Id, 13
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 10
+
+
+
+Axis 14: TIXELX
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 14
+    Name, TIXELX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:SoftEndMaxControl:Range, 2
+    Enc:SoftEndMinControl:Range, -2
+    Id, 14
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 15: TIXELY
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 15
+    Name, TIXELY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:SoftEndMaxControl:Range, 2
+    Enc:SoftEndMinControl:Range, -2
+    Id, 15
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
+
+
+
+Axis 16: TIXELZ
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 16
+    Name, TIXELZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:SoftEndMaxControl:Range, 2
+    Enc:SoftEndMinControl:Range, -2
+    Id, 16
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1
 
 
