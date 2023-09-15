@@ -1,0 +1,198 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+Global_Version
+^^^^^^^^^^^^^^
+
+::
+
+    {attribute 'TcGenerated'}
+    // This function has been automatically generated from the project information.
+    VAR_GLOBAL CONSTANT
+        {attribute 'const_non_replaced'}
+        {attribute 'linkalways'}
+        stLibVersion_tmo_lamp_motion : ST_LibVersion := (iMajor := 2, iMinor := 0, iBuild := 0, iRevision := 0, sVersion := '2.0.0');
+    END_VAR
+
+
+
+
+POUs
+----
+
+
+Main
+^^^^
+
+::
+
+    PROGRAM Main
+    VAR
+        // Motors
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasJetX-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[GasJetX-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:01
+        '}
+        M1		: DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Jet X
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasJetY-EL7041]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable:=TIIB[GasJetY-EL7041]^STM Status^Status^Digital input 1'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:02
+        '}
+        M2		: DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Jet Y
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:03
+        '}
+        M3		: DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Jet Z
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:04
+        '}
+        M4	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Needle X
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleY-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[GasNeedleY-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:05
+        '}
+        M5	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Needle Y
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleZ-EL7041]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable:=TIIB[GasNeedleZ-EL7041]^STM Status^Status^Digital input 1'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:06
+        '}
+        M6	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+        nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+    //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+        nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Needle Z
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 1^Input;
+                                  .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 2^Input'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:07
+        '}
+        M7  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle X
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 4^Input;
+                                  .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 3^Input'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:08
+        '}
+        M8  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Y
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 1^Input;
+                                  .bLimitBackwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 2^Input'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:09
+        '}
+        M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
+
+        // ...//
+        // TIXEL
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:14
+        '}
+        M14		: DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION); // TIXEL X
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:15
+        '}
+        M15		: DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION); // TIXEL Y
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: TMO:LAMP:MMS:16
+        '}
+        M16		: DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION); // TIXEL Z
+
+
+        fbMotionStageM1	: FB_MotionStage;
+        fbMotionStageM2	: FB_MotionStage;
+        fbMotionStageM3	: FB_MotionStage;
+        fbMotionStageM4	: FB_MotionStage;
+        fbMotionStageM5	: FB_MotionStage;
+        fbMotionStageM6	: FB_MotionStage;
+        fbMotionStageM7	: FB_MotionStage;
+        fbMotionStageM8	: FB_MotionStage;
+        fbMotionStageM9	: FB_MotionStage;
+        //...//
+        fbMotionStageM14	: FB_MotionStage;
+        fbMotionStageM15	: FB_MotionStage;
+        fbMotionStageM16	: FB_MotionStage;
+    END_VAR
+    // Hardware Enable
+    // Gas Jet
+    M1.bHardwareEnable	:= TRUE;
+    M2.bHardwareEnable	:= TRUE;
+    M3.bHardwareEnable	:= TRUE;
+
+    fbMotionStageM1(stMotionStage:=M1);
+    fbMotionStageM2(stMotionStage:=M2);
+    fbMotionStageM3(stMotionStage:=M3);
+
+    // Gas Needle
+    M4.bHardwareEnable	:= TRUE;
+    M5.bHardwareEnable	:= TRUE;
+    M6.bHardwareEnable	:= TRUE;
+
+    fbMotionStageM4(stMotionStage:=M4);
+    fbMotionStageM5(stMotionStage:=M5);
+    fbMotionStageM6(stMotionStage:=M6);
+
+    // Sample Paddle
+    //M7.bHardwareEnable	:= TRUE;
+    //M8.bHardwareEnable	:= TRUE;
+    //M9.bHardwareEnable	:= TRUE;
+
+    //fbMotionStageM7(stMotionStage:=M7);
+    //fbMotionStageM8(stMotionStage:=M8);
+    //fbMotionStageM9(stMotionStage:=M9);
+
+    // TIXEL
+    M14.bHardwareEnable	:= TRUE;
+    M15.bHardwareEnable	:= TRUE;
+    M16.bHardwareEnable	:= TRUE;
+
+    fbMotionStageM14(stMotionStage:=M14);
+    fbMotionStageM15(stMotionStage:=M15);
+    fbMotionStageM16(stMotionStage:=M16);
+
+    END_PROGRAM
+
+
+

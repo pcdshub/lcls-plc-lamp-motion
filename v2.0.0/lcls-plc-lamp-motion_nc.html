@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NC Settings &mdash; pcdshub/lcls-plc-lamp-motion  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Box Hierarchy" href="lcls-plc-lamp-motion_ethercat.html" />
+    <link rel="prev" title="Pragmas" href="lcls-plc-lamp-motion_pragmas.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-lamp-motion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">lcls-plc-lamp-motion</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NC Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#axis-1-gasjetx">Axis 1: GasJetX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-2-gasjety">Axis 2: GasJetY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-3-gasjetz">Axis 3: GasJetZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-4-gasneedlex">Axis 4: GasNeedleX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-5-gasneedley">Axis 5: GasNeedleY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-6-gasneedlez">Axis 6: GasNeedleZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-7-samplepaddlex">Axis 7: SamplePaddleX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-8-samplepaddley">Axis 8: SamplePaddleY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-9-samplepaddlez">Axis 9: SamplePaddleZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-10-flowcellx">Axis 10: FlowCellX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-11-flowcelly">Axis 11: FlowCellY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-12-flowcellz">Axis 12: FlowCellZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-13-flowcelltheta">Axis 13: FlowCellTheta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-14-tixelx">Axis 14: TIXELX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-15-tixely">Axis 15: TIXELY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-16-tixelz">Axis 16: TIXELZ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">lamp_motion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-lamp-motion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NC Settings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/lcls-plc-lamp-motion_nc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nc-settings">
+<h1>NC Settings<a class="headerlink" href="#nc-settings" title="Link to this heading"></a></h1>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Axis ID</p></th>
+<th class="head"><p>Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GasJetX</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>GasJetY</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>GasJetZ</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>GasNeedleX</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>GasNeedleY</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>GasNeedleZ</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>SamplePaddleX</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>SamplePaddleY</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>SamplePaddleZ</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>FlowCellX</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>FlowCellY</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>FlowCellZ</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>FlowCellTheta</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>TIXELX</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>TIXELY</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>TIXELZ</p></td>
+</tr>
+</tbody>
+</table>
+<section id="axis-1-gasjetx">
+<h2>Axis 1: GasJetX<a class="headerlink" href="#axis-1-gasjetx" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasJetX</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMaxControl:Range</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-2-gasjety">
+<h2>Axis 2: GasJetY<a class="headerlink" href="#axis-2-gasjety" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasJetY</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-3-gasjetz">
+<h2>Axis 3: GasJetZ<a class="headerlink" href="#axis-3-gasjetz" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasJetZ</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>9.375e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-4-gasneedlex">
+<h2>Axis 4: GasNeedleX<a class="headerlink" href="#axis-4-gasneedlex" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasNeedleX</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-5-gasneedley">
+<h2>Axis 5: GasNeedleY<a class="headerlink" href="#axis-5-gasneedley" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasNeedleY</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>9.375e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-6-gasneedlez">
+<h2>Axis 6: GasNeedleZ<a class="headerlink" href="#axis-6-gasneedlez" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>GasNeedleZ</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>9.375e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-7-samplepaddlex">
+<h2>Axis 7: SamplePaddleX<a class="headerlink" href="#axis-7-samplepaddlex" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SamplePaddleX</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#xffffffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>1e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-39</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Time</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-8-samplepaddley">
+<h2>Axis 8: SamplePaddleY<a class="headerlink" href="#axis-8-samplepaddley" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SamplePaddleY</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#xffffffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>2e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMaxControl:Range</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-10</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Time</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-9-samplepaddlez">
+<h2>Axis 9: SamplePaddleZ<a class="headerlink" href="#axis-9-samplepaddlez" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SamplePaddleZ</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#xffffffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>1e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Time</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-10-flowcellx">
+<h2>Axis 10: FlowCellX<a class="headerlink" href="#axis-10-flowcellx" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>FlowCellX</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:EncType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorDenominator</p></td>
+<td><p>1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>9.375e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-11-flowcelly">
+<h2>Axis 11: FlowCellY<a class="headerlink" href="#axis-11-flowcelly" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>FlowCellY</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:EncType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorDenominator</p></td>
+<td><p>0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>7.8125e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-12-flowcellz">
+<h2>Axis 12: FlowCellZ<a class="headerlink" href="#axis-12-flowcellz" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>FlowCellZ</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:EncType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>7.8125e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-13-flowcelltheta">
+<h2>Axis 13: FlowCellTheta<a class="headerlink" href="#axis-13-flowcelltheta" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>FlowCellTheta</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:EncType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>0.0003125</p></td>
+</tr>
+<tr class="row-odd"><td><p>General:UnitName</p></td>
+<td><p>Degree</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>10</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-14-tixelx">
+<h2>Axis 14: TIXELX<a class="headerlink" href="#axis-14-tixelx" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>TIXELX</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMaxControl:Range</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-15-tixely">
+<h2>Axis 15: TIXELY<a class="headerlink" href="#axis-15-tixely" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>TIXELY</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMaxControl:Range</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-16-tixelz">
+<h2>Axis 16: TIXELZ<a class="headerlink" href="#axis-16-tixelz" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>TIXELZ</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:Deceleration</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:DelayTime</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>3.90625e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMaxControl:Range</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lcls-plc-lamp-motion_pragmas.html" class="btn btn-neutral float-left" title="Pragmas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lcls-plc-lamp-motion_ethercat.html" class="btn btn-neutral float-right" title="Box Hierarchy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
