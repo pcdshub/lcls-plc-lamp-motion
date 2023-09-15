@@ -1,0 +1,30 @@
+lcls-plc-lamp-motion
+--------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-lamp-motion
+
+    lcls-plc-lamp-motion_pragmas
+    lcls-plc-lamp-motion_nc
+    lcls-plc-lamp-motion_ethercat
+    lcls-plc-lamp-motion_boxes
+    lcls-plc-lamp-motion_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lamp_motion
+
+    lcls-plc-lamp-motion_lamp_motion_summary
+    lcls-plc-lamp-motion_lamp_motion_epics
+    lcls-plc-lamp-motion_lamp_motion_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

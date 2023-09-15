@@ -1,0 +1,209 @@
+Box Hierarchy
+-------------
+
+
+#. **Power (EK1200) [ID: 1]**
+        EK1200-5000 EtherCAT Power supply (2A E-Bus)
+
+    #. PMPS_FFO [ID: 2]
+            EL2202 2Ch. Dig. Output 24V, 0.5A
+
+
+
+    #. License (EL6070) [ID: 3]
+            EL6070 1Ch. Licensing-Terminal
+
+
+
+    #. PMPS_PRE [ID: 4]
+            EL6695 EtherCAT Bridge terminal (Primary)
+
+
+
+    #. PLC Junction 1 (EK1122) [ID: 5]
+            EK1122 2 port EtherCAT junction
+
+        #. **X1 AtmosphereMotion (EK1100) [ID: 6]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. GasJetX-EL7041 [ID: 7]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. GasJetY-EL7041 [ID: 8]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. GasJetZ-EL7041 [ID: 9]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. GasNeedleX-EL7041 [ID: 10]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. GasNeedleY-EL7041 [ID: 11]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. GasNeedleZ-EL7041 [ID: 12]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. FlowCellTheta-EL7041 [ID: 40]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. Microscope-EL7342 [ID: 13]
+                    EL7342 2Ch. DC motor output stage (50V, 3.5A)
+
+
+
+            #. GasJetXY-EL5042 [ID: 14]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. GasJetZGasNeedleX-EL5042 [ID: 15]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. GasNeedleYZ-EL5042 [ID: 16]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. AtmosphereMotion-EK1110 [ID: 17]
+                    EK1110 EtherCAT extension
+
+
+
+
+
+        #. **X1 VacuumMotion (EK1100) [ID: 18]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. SamplePaddleX-EL7041 [ID: 19]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. SamplePaddleXY-EL1084 [ID: 20]
+                    EL1084 4Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. SamplePaddleY-EL7041 [ID: 21]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. SamplePaddleX-EL5021 [ID: 22]
+                    EL5021 1Ch. Sin/Cos Encoder
+
+
+
+            #. SamplePaddleY-EL5021 [ID: 23]
+                    EL5021 1Ch. Sin/Cos Encoder
+
+
+
+            #. SamplePaddleZ-EL7041 [ID: 24]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. SamplePaddleZ-EL1084 [ID: 25]
+                    EL1084 4Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. SamplePaddleZ-EL5021 [ID: 26]
+                    EL5021 1Ch. Sin/Cos Encoder
+
+
+
+            #. Term 56 (EL9410) [ID: 56]
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+
+
+
+            #. Term 57 (EL7041) [ID: 57]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. Term 58 (EL5021) [ID: 58]
+                    EL5021 1K. Sin/Cos Encoder
+
+
+
+            #. Term 59 (EL1084) [ID: 59]
+                    EL1084 4Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. Term 60 (EL7041) [ID: 60]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. Term 61 (EL5021) [ID: 61]
+                    EL5021 1Ch. Sin/Cos Encoder
+
+
+
+            #. Term 69 (EL9011) [ID: 69]
+                    EL9011 End Terminal
+
+
+
+
+
+        #. **TIXEL (EK1100) [ID: 62]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. TIXELX-EL7041 [ID: 63]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. TIXELXY_ENC-EL5042 [ID: 64]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. TIXELY-EL7041 [ID: 65]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. TIXELZ-EL7041 [ID: 66]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. TIXELZ_ENC-EL5042 [ID: 67]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. Term 68 (EK1110) [ID: 68]
+                    EK1110 EtherCAT extension
+
+
+
+
+
+
+
+
+
