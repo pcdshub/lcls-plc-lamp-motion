@@ -490,8 +490,8 @@ Links
         lamp_motion Instance, PlcTask Inputs^Main.M2.bLimitBackwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetY-EL7041, STM Status^Status^Digital input 1
         lamp_motion Instance, PlcTask Inputs^Main.M2.bLimitForwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetY-EL7041, STM Status^Status^Digital input 2
         lamp_motion Instance, PlcTask Inputs^Main.M3.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^GasJetZ, Outputs^ToPlc
-        lamp_motion Instance, PlcTask Inputs^Main.M3.bLimitBackwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetZ-EL7041, STM Status^Status^Digital input 2
-        lamp_motion Instance, PlcTask Inputs^Main.M3.bLimitForwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetZ-EL7041, STM Status^Status^Digital input 1
+        lamp_motion Instance, PlcTask Inputs^Main.M3.bLimitBackwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetZ-EL7041, STM Status^Status^Digital input 1
+        lamp_motion Instance, PlcTask Inputs^Main.M3.bLimitForwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasJetZ-EL7041, STM Status^Status^Digital input 2
         lamp_motion Instance, PlcTask Inputs^Main.M4.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^GasNeedleX, Outputs^ToPlc
         lamp_motion Instance, PlcTask Inputs^Main.M4.bLimitBackwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasNeedleX-EL7041, STM Status^Status^Digital input 2
         lamp_motion Instance, PlcTask Inputs^Main.M4.bLimitForwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 AtmosphereMotion (EK1100)^GasNeedleX-EL7041, STM Status^Status^Digital input 1

@@ -40,8 +40,8 @@ Main
     //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
         nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Jet Y
 
-        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 1'}
         {attribute 'pytmc' := '
             pv: TMO:LAMP:MMS:03
         '}
@@ -103,22 +103,25 @@ Main
 
         // ...//
         // TIXEL
-        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'TcLinkTo' := '	.bLimitForwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 1;
+                                      .bLimitBackwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 2';
+                                    .nRawEncoderULINT:=TIIB[TIXELXY_ENC-EL5042]^FB Inputs Channel 1^Position'}
         {attribute 'pytmc' := '
             pv: TMO:LAMP:MMS:14
         '}
         M14		: DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION); // TIXEL X
 
-        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'TcLinkTo' := '	.bLimitForwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 1;
+                                      .bLimitBackwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 2';
+                                    .nRawEncoderULINT:=TIIB[TIXELXY_ENC-EL5042]^FB Inputs Channel 2^Position'}
         {attribute 'pytmc' := '
             pv: TMO:LAMP:MMS:15
         '}
         M15		: DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION); // TIXEL Y
 
-        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 2'}
+        {attribute 'TcLinkTo' := '	.bLimitForwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 1;
+                                      .bLimitBackwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 2';
+                                    .nRawEncoderULINT:=TIIB[TIXELZ_ENC-EL5042]^FB Inputs Channel 1^Position'}
         {attribute 'pytmc' := '
             pv: TMO:LAMP:MMS:16
         '}

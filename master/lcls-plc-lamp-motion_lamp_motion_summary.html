@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Settings &mdash; pcdshub/lcls-plc-lamp-motion  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -14,7 +18,7 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
@@ -47,7 +51,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_links.html">Links</a></li>
 </ul>
@@ -218,27 +222,27 @@ Total linter errors: 0</p>
 </tr>
 <tr class="row-odd"><td><p>Constants.CompilerVersion</p></td>
 <td><p>VERSION</p></td>
-<td><p>637535808 (64)</p></td>
+<td><p>638497728 (64)</p></td>
 </tr>
 <tr class="row-even"><td><p>Constants.CompilerVersionNumeric</p></td>
 <td><p>DWORD</p></td>
-<td><p>637535936 (32)</p></td>
+<td><p>638497856 (32)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Constants.nPackMode</p></td>
 <td><p>UINT</p></td>
-<td><p>637535888 (16)</p></td>
+<td><p>638497808 (16)</p></td>
 </tr>
 <tr class="row-even"><td><p>Constants.nRegisterSize</p></td>
 <td><p>WORD</p></td>
-<td><p>637535872 (16)</p></td>
+<td><p>638497792 (16)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Constants.RuntimeVersion</p></td>
 <td><p>VERSION</p></td>
-<td><p>637535744 (64)</p></td>
+<td><p>638497664 (64)</p></td>
 </tr>
 <tr class="row-even"><td><p>Constants.RuntimeVersionNumeric</p></td>
 <td><p>DWORD</p></td>
-<td><p>637535904 (32)</p></td>
+<td><p>638497824 (32)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1466,7 +1470,7 @@ Total linter errors: 0</p>
 <section id="main">
 <h2>Main<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <details>
-    <summary>126 Symbols</summary><table class="docutils align-center">
+    <summary>168 Symbols</summary><table class="docutils align-center">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
 <th class="head"><p>Type</p></th>
@@ -1476,155 +1480,323 @@ Total linter errors: 0</p>
 <tbody>
 <tr class="row-even"><td><p>Main.fbMotionStageM1</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>634840704 (299392)</p></td>
+<td><p>634904448 (299392)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Main.fbMotionStageM1.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>634843200 (2048)</p></td>
+<td><p>634906944 (2048)</p></td>
 </tr>
 <tr class="row-even"><td><p>Main.fbMotionStageM1.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>634842176 (1024)</p></td>
+<td><p>634905920 (1024)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM2</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM14</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>635140096 (299392)</p></td>
+<td><p>637598976 (299392)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM2.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM14.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>635142592 (2048)</p></td>
+<td><p>637601472 (2048)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM2.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM14.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>635141568 (1024)</p></td>
+<td><p>637600448 (1024)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM3</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM15</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>635439488 (299392)</p></td>
+<td><p>637898368 (299392)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM3.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM15.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>635441984 (2048)</p></td>
+<td><p>637900864 (2048)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM3.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM15.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>635440960 (1024)</p></td>
+<td><p>637899840 (1024)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM4</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM16</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>635738880 (299392)</p></td>
+<td><p>638197760 (299392)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM4.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM16.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>635741376 (2048)</p></td>
+<td><p>638200256 (2048)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM4.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM16.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>635740352 (1024)</p></td>
+<td><p>638199232 (1024)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM5</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM2</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>636038272 (299392)</p></td>
+<td><p>635203840 (299392)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM5.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM2.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>636040768 (2048)</p></td>
+<td><p>635206336 (2048)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM5.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM2.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>636039744 (1024)</p></td>
+<td><p>635205312 (1024)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM6</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM3</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>636337664 (299392)</p></td>
+<td><p>635503232 (299392)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM6.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM3.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>636340160 (2048)</p></td>
+<td><p>635505728 (2048)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM6.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM3.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>636339136 (1024)</p></td>
+<td><p>635504704 (1024)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM7</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM4</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>636637056 (299392)</p></td>
+<td><p>635802624 (299392)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM7.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM4.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>636639552 (2048)</p></td>
+<td><p>635805120 (2048)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM7.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM4.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>636638528 (1024)</p></td>
+<td><p>635804096 (1024)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM8</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM5</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>636936448 (299392)</p></td>
+<td><p>636102016 (299392)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM8.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM5.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>636938944 (2048)</p></td>
+<td><p>636104512 (2048)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM8.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM5.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>636937920 (1024)</p></td>
+<td><p>636103488 (1024)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM9</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM6</p></td>
 <td><p>FB_MotionStage</p></td>
-<td><p>637235840 (299392)</p></td>
+<td><p>636401408 (299392)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.fbMotionStageM9.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM6.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
-<td><p>637238336 (2048)</p></td>
+<td><p>636403904 (2048)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.fbMotionStageM9.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<tr class="row-even"><td><p>Main.fbMotionStageM6.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
-<td><p>637237312 (1024)</p></td>
+<td><p>636402880 (1024)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1</p></td>
+<tr class="row-odd"><td><p>Main.fbMotionStageM7</p></td>
+<td><p>FB_MotionStage</p></td>
+<td><p>636700800 (299392)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.fbMotionStageM7.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>636703296 (2048)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.fbMotionStageM7.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>636702272 (1024)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.fbMotionStageM8</p></td>
+<td><p>FB_MotionStage</p></td>
+<td><p>637000192 (299392)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.fbMotionStageM8.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>637002688 (2048)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.fbMotionStageM8.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>637001664 (1024)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.fbMotionStageM9</p></td>
+<td><p>FB_MotionStage</p></td>
+<td><p>637299584 (299392)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.fbMotionStageM9.fbDriveVirtual.MasterAxis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>637302080 (2048)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.fbMotionStageM9.fbDriveVirtual.MasterAxis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>637301056 (1024)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M1</p></td>
 <td><p>DUT_MotionStage</p></td>
 <td><p>634649472 (21248)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.M1.Axis.NcToPlc</p></td>
+<tr class="row-odd"><td><p>Main.M1.Axis.NcToPlc</p></td>
 <td><p>NCTOPLC_AXIS_REF</p></td>
 <td><p>634650560 (2048)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1.Axis.PlcToNc</p></td>
+<tr class="row-even"><td><p>Main.M1.Axis.PlcToNc</p></td>
 <td><p>PLCTONC_AXIS_REF</p></td>
 <td><p>634649536 (1024)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.M1.bBrakeRelease</p></td>
+<tr class="row-odd"><td><p>Main.M1.bBrakeRelease</p></td>
 <td><p>BOOL</p></td>
 <td><p>634658584 (8)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1.bHardwareEnable</p></td>
+<tr class="row-even"><td><p>Main.M1.bHardwareEnable</p></td>
 <td><p>BOOL</p></td>
 <td><p>634658592 (8)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.M1.bHome</p></td>
+<tr class="row-odd"><td><p>Main.M1.bHome</p></td>
 <td><p>BOOL</p></td>
 <td><p>634658576 (8)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1.bLimitBackwardEnable</p></td>
+<tr class="row-even"><td><p>Main.M1.bLimitBackwardEnable</p></td>
 <td><p>BOOL</p></td>
 <td><p>634658568 (8)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.M1.bLimitForwardEnable</p></td>
+<tr class="row-odd"><td><p>Main.M1.bLimitForwardEnable</p></td>
 <td><p>BOOL</p></td>
 <td><p>634658560 (8)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1.nRawEncoderINT</p></td>
+<tr class="row-even"><td><p>Main.M1.nRawEncoderINT</p></td>
 <td><p>INT</p></td>
 <td><p>634658704 (16)</p></td>
 </tr>
-<tr class="row-even"><td><p>Main.M1.nRawEncoderUINT</p></td>
+<tr class="row-odd"><td><p>Main.M1.nRawEncoderUINT</p></td>
 <td><p>UINT</p></td>
 <td><p>634658688 (16)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Main.M1.nRawEncoderULINT</p></td>
+<tr class="row-even"><td><p>Main.M1.nRawEncoderULINT</p></td>
 <td><p>ULINT</p></td>
 <td><p>634658624 (64)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14</p></td>
+<td><p>DUT_MotionStage</p></td>
+<td><p>634840704 (21248)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M14.Axis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>634841792 (2048)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14.Axis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>634840768 (1024)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M14.bBrakeRelease</p></td>
+<td><p>BOOL</p></td>
+<td><p>634849816 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14.bHardwareEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634849824 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M14.bHome</p></td>
+<td><p>BOOL</p></td>
+<td><p>634849808 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14.bLimitBackwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634849800 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M14.bLimitForwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634849792 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14.nRawEncoderINT</p></td>
+<td><p>INT</p></td>
+<td><p>634849936 (16)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M14.nRawEncoderUINT</p></td>
+<td><p>UINT</p></td>
+<td><p>634849920 (16)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M14.nRawEncoderULINT</p></td>
+<td><p>ULINT</p></td>
+<td><p>634849856 (64)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15</p></td>
+<td><p>DUT_MotionStage</p></td>
+<td><p>634861952 (21248)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M15.Axis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>634863040 (2048)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15.Axis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>634862016 (1024)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M15.bBrakeRelease</p></td>
+<td><p>BOOL</p></td>
+<td><p>634871064 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15.bHardwareEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634871072 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M15.bHome</p></td>
+<td><p>BOOL</p></td>
+<td><p>634871056 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15.bLimitBackwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634871048 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M15.bLimitForwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634871040 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15.nRawEncoderINT</p></td>
+<td><p>INT</p></td>
+<td><p>634871184 (16)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M15.nRawEncoderUINT</p></td>
+<td><p>UINT</p></td>
+<td><p>634871168 (16)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M15.nRawEncoderULINT</p></td>
+<td><p>ULINT</p></td>
+<td><p>634871104 (64)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16</p></td>
+<td><p>DUT_MotionStage</p></td>
+<td><p>634883200 (21248)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M16.Axis.NcToPlc</p></td>
+<td><p>NCTOPLC_AXIS_REF</p></td>
+<td><p>634884288 (2048)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16.Axis.PlcToNc</p></td>
+<td><p>PLCTONC_AXIS_REF</p></td>
+<td><p>634883264 (1024)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M16.bBrakeRelease</p></td>
+<td><p>BOOL</p></td>
+<td><p>634892312 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16.bHardwareEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634892320 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M16.bHome</p></td>
+<td><p>BOOL</p></td>
+<td><p>634892304 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16.bLimitBackwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634892296 (8)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M16.bLimitForwardEnable</p></td>
+<td><p>BOOL</p></td>
+<td><p>634892288 (8)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16.nRawEncoderINT</p></td>
+<td><p>INT</p></td>
+<td><p>634892432 (16)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main.M16.nRawEncoderUINT</p></td>
+<td><p>UINT</p></td>
+<td><p>634892416 (16)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Main.M16.nRawEncoderULINT</p></td>
+<td><p>ULINT</p></td>
+<td><p>634892352 (64)</p></td>
 </tr>
 <tr class="row-even"><td><p>Main.M2</p></td>
 <td><p>DUT_MotionStage</p></td>
@@ -2189,7 +2361,7 @@ Total linter errors: 0</p>
 <tbody>
 <tr class="row-even"><td><p>TC_EVENTS.LCLSGeneralEventClass</p></td>
 <td><p>LCLSGeneralEventClass</p></td>
-<td><p>637570784 (960)</p></td>
+<td><p>638548320 (960)</p></td>
 </tr>
 </tbody>
 </table>
@@ -2206,23 +2378,23 @@ Total linter errors: 0</p>
 <tbody>
 <tr class="row-even"><td><p>TwinCAT_SystemInfoVarList.__PlcTask</p></td>
 <td><p>_Implicit_Task_Info</p></td>
-<td><p>637539104 (704)</p></td>
+<td><p>638501024 (704)</p></td>
 </tr>
 <tr class="row-odd"><td><p>TwinCAT_SystemInfoVarList._AppInfo</p></td>
 <td><p>PlcAppSystemInfo</p></td>
-<td><p>637535968 (2048)</p></td>
+<td><p>638497888 (2048)</p></td>
 </tr>
 <tr class="row-even"><td><p>TwinCAT_SystemInfoVarList._TaskInfo</p></td>
 <td><p>PlcTaskSystemInfo</p></td>
-<td><p>637538048 (1024)</p></td>
+<td><p>638499968 (1024)</p></td>
 </tr>
 <tr class="row-odd"><td><p>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</p></td>
 <td><p>OTCID</p></td>
-<td><p>637539072 (32)</p></td>
+<td><p>638500992 (32)</p></td>
 </tr>
 <tr class="row-even"><td><p>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</p></td>
 <td><p>OTCID</p></td>
-<td><p>637538016 (32)</p></td>
+<td><p>638499936 (32)</p></td>
 </tr>
 </tbody>
 </table>
@@ -2240,7 +2412,7 @@ Total linter errors: 0</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
