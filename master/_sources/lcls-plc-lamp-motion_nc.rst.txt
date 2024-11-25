@@ -39,11 +39,11 @@ Axis 1: GasJetX
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:Inverse, true
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Enc:SoftEndMaxControl:Range, 2
     Enc:SoftEndMinControl:Range, -2
     Id, 1
@@ -66,10 +66,10 @@ Axis 2: GasJetY
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Id, 2
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 1
@@ -90,10 +90,10 @@ Axis 3: GasJetZ
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 29
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 9.375e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Id, 3
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 1
@@ -184,6 +184,7 @@ Axis 7: SamplePaddleX
     Name, SamplePaddleX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -212,6 +213,7 @@ Axis 8: SamplePaddleY
     Name, SamplePaddleY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -241,6 +243,7 @@ Axis 9: SamplePaddleZ
     Name, SamplePaddleZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -268,6 +271,7 @@ Axis 10: FlowCellX
     Name, FlowCellX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -291,6 +295,7 @@ Axis 11: FlowCellY
     Name, FlowCellY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -314,6 +319,7 @@ Axis 12: FlowCellZ
     Name, FlowCellZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -336,6 +342,7 @@ Axis 13: FlowCellTheta
     Name, FlowCellTheta
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Enc:EncType, 1
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:ScaleFactorNumerator, 0.0003125
@@ -357,6 +364,7 @@ Axis 14: TIXELX
     Name, TIXELX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -384,6 +392,7 @@ Axis 15: TIXELY
     Name, TIXELY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -411,6 +420,7 @@ Axis 16: TIXELZ
     Name, TIXELZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008

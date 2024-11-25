@@ -2575,7 +2575,7 @@ GasJetXY-EL5042
         SyncMan, 001080002600010001000000400080008000001026010000
         SyncMan, 801080002200010002000000400080008000801022010000
         SyncMan, 001100000400000003000000000000000000001104000000
-        SyncMan, 801114002000010004000000000000001400801120010000
+        SyncMan, 80110c002000010004000000000000001400801120010000
         Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
         Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
         CoeProfile, 33624969
@@ -2583,7 +2583,7 @@ GasJetXY-EL5042
 
 
 
-PDO FB Inputs Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)
+PDO FB Inputs Channel 1 (Index #x1a00, Flags #x0010, SyncMan )
 
 .. csv-table::
     :header: Name, Comment, BitLen, Index, Type
@@ -2601,7 +2601,7 @@ PDO FB Inputs Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)
 
 
 
-PDO FB Inputs Channel 2 (Index #x1a01, Flags #x0010, SyncMan 3)
+PDO FB Inputs Channel 2 (Index #x1a01, Flags #x0010, SyncMan )
 
 .. csv-table::
     :header: Name, Comment, BitLen, Index, Type
@@ -2619,7 +2619,7 @@ PDO FB Inputs Channel 2 (Index #x1a01, Flags #x0010, SyncMan 3)
 
 
 
-PDO FB Inputs Channel 1 compact (Index #x1a02, Flags #x0010, SyncMan )
+PDO FB Inputs Channel 1 compact (Index #x1a02, Flags #x0010, SyncMan 3)
 
 .. csv-table::
     :header: Name, Comment, BitLen, Index, Type
@@ -2637,7 +2637,7 @@ PDO FB Inputs Channel 1 compact (Index #x1a02, Flags #x0010, SyncMan )
 
 
 
-PDO FB Inputs Channel 2 compact (Index #x1a03, Flags #x0010, SyncMan )
+PDO FB Inputs Channel 2 compact (Index #x1a03, Flags #x0010, SyncMan 3)
 
 .. csv-table::
     :header: Name, Comment, BitLen, Index, Type
