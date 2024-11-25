@@ -39,16 +39,18 @@ Axis 1: GasJetX
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:Inverse, true
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Enc:SoftEndMaxControl:Range, 2
     Enc:SoftEndMinControl:Range, -2
     Id, 1
     OtherSettings:AllowMotionCmdToSlave, true
+    Velo:FastManual, 1
     Velo:Maximum, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -66,13 +68,19 @@ Axis 2: GasJetY
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 735
     Id, 2
     OtherSettings:AllowMotionCmdToSlave, true
-    Velo:Maximum, 1
+    Velo:FastManual, 1
+    Velo:Maximum, 8
+    Velo:RefSearch, 1
+    Velo:RefSync, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -87,16 +95,22 @@ Axis 3: GasJetZ
     Name, GasJetZ
     AxisType, 1
     CreateSymbols, true
-    Dynamic:Acceleration, 2
-    Dynamic:Deceleration, 2
+    Dynamic:Acceleration, 3.01464
+    Dynamic:AccelerationMaximum, 130
+    Dynamic:Deceleration, 3.01464
+    Dynamic:DecelerationMaximum, 130
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Dynamic:Jerk, 17.8197
+    Enc:EncType, 29
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 9.375e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Id, 3
     OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.01
+    Velo:FastManual, 1
     Velo:Maximum, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -111,16 +125,24 @@ Axis 4: GasNeedleX
     Name, GasNeedleX
     AxisType, 1
     CreateSymbols, true
-    Dynamic:Acceleration, 2
+    Dynamic:Acceleration, 0.5
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 29
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 3.90625e-05
+    Enc:MaxCount, #xffffffff
+    Enc:Offset, -214613
+    Enc:ScaleFactorNumerator, 5e-05
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 39.5
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, 19
     Id, 4
     OtherSettings:AllowMotionCmdToSlave, true
+    PositionAreaControl:Range, 0.005
+    Velo:FastManual, 1
     Velo:Maximum, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -138,13 +160,18 @@ Axis 5: GasNeedleY
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 9.375e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
     Id, 5
     OtherSettings:AllowMotionCmdToSlave, true
+    PositionAreaControl:Range, 0.5
+    TargetPosControl:Range, 0.001
+    TargetPosControl:Time, 0.2
+    Velo:FastManual, 1
     Velo:Maximum, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -162,14 +189,22 @@ Axis 6: GasNeedleZ
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
-    Enc:EncType, 4
+    Enc:EncType, 19
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:Inverse, true
-    Enc:MaxCount, #x0000ffff
-    Enc:ScaleFactorNumerator, 9.375e-05
+    Enc:MaxCount, #xffffffff
+    Enc:ScaleFactorNumerator, 5e-05
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, -25
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -50
     Id, 6
     OtherSettings:AllowMotionCmdToSlave, true
+    PositionAreaControl:Range, 0.005
+    TargetPosControl:Range, 0.5
+    Velo:FastManual, 1
     Velo:Maximum, 1
+    Velo:SlowManual, 0.5
 
 
 
@@ -184,6 +219,7 @@ Axis 7: SamplePaddleX
     Name, SamplePaddleX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -212,6 +248,7 @@ Axis 8: SamplePaddleY
     Name, SamplePaddleY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -241,6 +278,7 @@ Axis 9: SamplePaddleZ
     Name, SamplePaddleZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -268,6 +306,7 @@ Axis 10: FlowCellX
     Name, FlowCellX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -291,6 +330,7 @@ Axis 11: FlowCellY
     Name, FlowCellY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -314,6 +354,7 @@ Axis 12: FlowCellZ
     Name, FlowCellZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Enc:EncType, 1
@@ -336,6 +377,7 @@ Axis 13: FlowCellTheta
     Name, FlowCellTheta
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Enc:EncType, 1
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:ScaleFactorNumerator, 0.0003125
@@ -357,6 +399,7 @@ Axis 14: TIXELX
     Name, TIXELX
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -384,6 +427,7 @@ Axis 15: TIXELY
     Name, TIXELY
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008
@@ -411,6 +455,7 @@ Axis 16: TIXELZ
     Name, TIXELZ
     AxisType, 1
     CreateSymbols, true
+    Disabled, true
     Dynamic:Acceleration, 2
     Dynamic:Deceleration, 2
     Dynamic:DelayTime, 0.008

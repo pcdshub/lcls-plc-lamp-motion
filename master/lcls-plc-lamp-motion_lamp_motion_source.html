@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -5,22 +7,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-lamp-motion  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
       <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -63,7 +61,10 @@
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_epics.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-lamp-motion_lamp_motion_epics.html#database-records">Database Records</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-plc-interfaces">GVL_PLC_Interfaces</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#main">Main</a></li>
 </ul>
@@ -99,6 +100,37 @@
 </section>
 <section id="gvls">
 <h1>GVLs<a class="headerlink" href="#gvls" title="Link to this heading"></a></h1>
+<section id="gvl-plc-interfaces">
+<h2>GVL_PLC_Interfaces<a class="headerlink" href="#gvl-plc-interfaces" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="n">VAR_GLOBAL</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">ETHERCAT</span> <span class="n">BRRIDGE</span> <span class="n">COM</span> <span class="n">STATUS</span><span class="o">*</span><span class="p">)</span>
+    <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">Other</span> <span class="n">side</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">OP</span> <span class="n">state</span><span class="p">,</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="n">Error</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[LAMP_MOTION_E03_EL6695]^SYNC Inputs^TxPDO state</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xEcatBridge_TxPDO_state</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span><span class="n">BOOL</span><span class="p">;</span>
+
+    <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="n">connectd</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="ow">not</span> <span class="n">connected</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[LAMP_MOTION_E03_EL6695]^SYNC Inputs^External device not connected</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xEcatBridge_External_device_not_connected</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+    <span class="o">//</span><span class="mi">0</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">valid</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">invalid</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[LAMP_MOTION_E03_EL6695]^WcState^WcState</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xEcatBridge_WcState</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[LAMP_MOTION_E03_EL6695]^IO Inputs^LAMP_GJ_VRC_01_OPEN_LS&#39;</span><span class="p">}</span>
+    <span class="n">xLAMP_GJ_VRC_01_OPEN_LS</span>  <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span>  <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[LAMP_MOTION_E03_EL6695]^IO Outputs^LAMP_GJY_OUT&#39;</span><span class="p">}</span>
+    <span class="n">xLAMP_GJY_OUT</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="pous">
 <h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
@@ -108,7 +140,8 @@
 <span class="n">VAR</span>
     <span class="o">//</span> <span class="n">Motors</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasJetX-EL7041]^STM Status^Status^Digital input 1;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetX</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetX</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span>     <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetXY</span><span class="o">-</span><span class="n">EL5042</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span> <span class="n">compact</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">01</span>
     <span class="s1">&#39;}</span>
@@ -117,18 +150,22 @@
 <span class="o">//</span>    <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span>
     <span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">ABSOLUTE_SET</span><span class="p">);</span> <span class="o">//</span> <span class="n">Gas</span> <span class="n">Jet</span> <span class="n">X</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasJetY-EL7041]^STM Status^Status^Digital input 2;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetY</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasJetY-EL7041]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetY</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">bBrakeRelease</span>        <span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetY</span><span class="o">-</span><span class="n">Brake</span><span class="o">-</span><span class="n">EL2004</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span>     <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetXY</span><span class="o">-</span><span class="n">EL5042</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span> <span class="n">compact</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">02</span>
     <span class="s1">&#39;}</span>
     <span class="n">M2</span>              <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
     <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span>
+    <span class="n">nBrakeMode</span><span class="o">:=</span><span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">IF_ENABLED</span><span class="p">,</span>
 <span class="o">//</span>    <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span>
     <span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">ABSOLUTE_SET</span><span class="p">);</span> <span class="o">//</span> <span class="n">Gas</span> <span class="n">Jet</span> <span class="n">Y</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasJetZ-EL7041]^STM Status^Status^Digital input 2;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetZ</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetZ</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span>     <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetZGasNeedleX</span><span class="o">-</span><span class="n">EL5042</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">03</span>
     <span class="s1">&#39;}</span>
@@ -138,7 +175,9 @@
     <span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">ABSOLUTE_SET</span><span class="p">);</span> <span class="o">//</span> <span class="n">Gas</span> <span class="n">Jet</span> <span class="n">Z</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleX</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleX</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span>     <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">GasJetZGasNeedleX</span><span class="o">-</span><span class="n">EL5042</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">04</span>
     <span class="s1">&#39;}</span>
@@ -148,7 +187,8 @@
     <span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">ABSOLUTE_SET</span><span class="p">);</span> <span class="o">//</span> <span class="n">Gas</span> <span class="n">Needle</span> <span class="n">X</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasNeedleY-EL7041]^STM Status^Status^Digital input 1;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleY</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleY</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=&lt;</span><span class="mi">0</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">0</span><span class="o">&gt;</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleYZ</span><span class="o">-</span><span class="n">EL5042</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span> <span class="n">compact</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">05</span>
     <span class="s1">&#39;}</span>
@@ -157,8 +197,10 @@
 <span class="o">//</span>    <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span>
     <span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">ABSOLUTE_SET</span><span class="p">);</span> <span class="o">//</span> <span class="n">Gas</span> <span class="n">Needle</span> <span class="n">Y</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasNeedleZ-EL7041]^STM Status^Status^Digital input 2;</span>
-                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleZ</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[GasNeedleZ-EL7041]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">GasNeedleZ</span><span class="o">-</span><span class="n">EL7041</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.nRawEncoderULINT:=&lt;0,32,0&gt;TIIB[GasNeedleYZ-EL5042]^FB Inputs Channel 2 compact^Position&#39;</span><span class="p">}</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">TMO</span><span class="p">:</span><span class="n">LAMP</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="mi">06</span>
     <span class="s1">&#39;}</span>
@@ -228,12 +270,21 @@
     <span class="n">fbMotionStageM14</span>        <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="n">fbMotionStageM15</span>        <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="n">fbMotionStageM16</span>        <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotionStageM2EPS</span> <span class="p">:</span> <span class="n">FB_EPS</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="o">//</span> <span class="n">Hardware</span> <span class="n">Enable</span>
 <span class="o">//</span> <span class="n">Gas</span> <span class="n">Jet</span>
 <span class="n">M1</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="n">M2</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">M3</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="o">//</span><span class="n">Gas</span> <span class="n">needle</span> <span class="n">Y</span> <span class="n">has</span> <span class="n">EPS</span> <span class="k">with</span> <span class="n">lamp</span><span class="o">-</span><span class="n">vac</span>
+<span class="n">M2</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">fbMotionStageM2EPS</span><span class="p">(</span><span class="n">eps</span><span class="o">:=</span><span class="n">M2</span><span class="o">.</span><span class="n">stEPSBackwardEnable</span><span class="p">);</span>
+<span class="n">fbMotionStageM2EPS</span><span class="o">.</span><span class="n">setMessage</span><span class="p">(</span><span class="s1">&#39;LAMP_GJ_VRC_01 is close; Ecat_OK&#39;</span><span class="p">);</span>
+<span class="n">fbMotionStageM2EPS</span><span class="o">.</span><span class="n">setBit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">xLAMP_GJ_VRC_01_OPEN_LS</span><span class="p">);</span>
+<span class="n">fbMotionStageM2EPS</span><span class="o">.</span><span class="n">setBit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">NOT</span><span class="p">(</span><span class="n">xEcatBridge_External_device_not_connected</span><span class="p">));</span>
+
+<span class="n">xLAMP_GJY_OUT</span> <span class="o">:=</span> <span class="n">NOT</span><span class="p">(</span><span class="n">M2</span><span class="o">.</span><span class="n">bLimitForwardEnable</span><span class="p">)</span> <span class="n">AND</span> <span class="n">M2</span><span class="o">.</span><span class="n">stAxisStatus</span><span class="o">.</span><span class="n">fActPosition</span> <span class="o">&gt;</span> <span class="mi">733</span> <span class="p">;</span>
+
 
 <span class="n">fbMotionStageM1</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M1</span><span class="p">);</span>
 <span class="n">fbMotionStageM2</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M2</span><span class="p">);</span>
@@ -282,7 +333,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
